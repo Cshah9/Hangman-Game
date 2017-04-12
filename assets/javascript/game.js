@@ -89,6 +89,7 @@ function newGame(){
 	guessedLetters = [];
 	document.getElementById("guessed-letters").textContent = guessesLeft;
 	document.getElementById("guesses-left").textContent = guessesLeft;
+	updateStats();
 }
 
 //converts array as string with spaces for displaying in html
@@ -150,9 +151,11 @@ function hasUserGuessedAlready(userGuess) {
 	}
 	else {
 		//this is a new guess, so add to the array of guessed letters
-		if (debug) console.log ("User has not guessed guessed " + letter);
+		if (debug) console.log ("User has not guessed  " + letter);
 		guessedLetters.push(letter);
 		updateGuessedLetters();
+		//decrement guess left
+		guessesLeft--
 
 		if (debug) console.log ("guessedLetters: " + guessedLetters);
 		return false;
@@ -186,7 +189,7 @@ function checkGuess(userGuess) {
 	else {
 
 		if (debug) console.log (currentWord + " DOES NOT contain " + letter);
-		//letter does not match, so update
+		//letter does not match, do nothing
 
 	}
 
@@ -197,6 +200,8 @@ function checkGuess(userGuess) {
 
 //update stats:
 function updateStats(){
+
+	document.getElementById("stats").textContent = "Wins: " + wins + " Losses: " + losses;
 
 }
 
@@ -218,8 +223,7 @@ function handleKeyUp (event) {
 		//check the users guess
 		checkGuess(userKey);
 
-		//decrement guess left
-		guessesLeft--
+		
 	}
 
 	document.getElementById("guesses-left").textContent = guessesLeft;
