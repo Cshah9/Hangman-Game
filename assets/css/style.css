@@ -10,6 +10,16 @@
 	padding: 10px 15px 12px 10px;
 	-webkit-border-radius: 100px;
 	border: 5px solid red;
-	font-family: "Tahoma";	
+	font-family: "Tahoma";
+
 }
 
+/*h1 {
+	display: block;
+	margin: auto;
+	text-align: center;
+}*/
+
+.redline {
+	border: 2px solid red;
+}

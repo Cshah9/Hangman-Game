@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hangman - Nintendo Style</title>
+
+	<!-- reset css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<!-- style css -->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+</head>
+<body>
+
+	<h1 class="nintendo">Nintendo Hangman!</h1>
+	<br>
+	<hr class="redline">
+	<br>
+
+	<!-- Display the following on the page - Press any key to get started! -->
+	<p> Press any key to get started </p>
+	<br>
+	<p> <span id="guessed-phrase"></span></p>
+	<br>
+	<p> Guesses Left: <span id="guesses-left">.</span></p>
+	<br>
+	<p> Letters Already Guessed: <span id="guessed-letters"></span></p>
+	<br>
+	<p> Game Stats <span id="stats"></span></p>
+
+	<!-- Adding script to end so all elements are created before accessing from the javascript -->
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</body>
+</html>
